@@ -1,0 +1,45 @@
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li>
+      <!-- <form class="info-link-add"> -->
+        <!-- <div class="input-field col s6">
+          <input type="text" name="title" placeholder="Title" class="validate">
+       </div>
+        <div class="input-field col s6"> 
+          <input type="url" name="url" placeholder="Url" class="validate">
+        </div>
+        <input type="submit" name="submit" value="Add new link"> -->
+
+        <div class="row">
+          <!-- <form class="col s12"> -->
+          <form class="info-link-add">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">title</i>
+                <!-- <input id="icon_prefix" type="text" class="validate"> -->
+                <input type="text" name="title" placeholder="Title" class="validate">
+                <!-- <label for="icon_prefix">First Name</label> -->
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">insert_link</i>
+                <input type="url" name="url" placeholder="Url" class="validate">
+                <!-- <input id="icon_telephone" type="tel" class="validate">
+                <label for="icon_telephone">Telephone</label> -->
+              </div>
+              <div >
+                <!-- <input type="submit" name="submit" value="Add new link"> -->
+                <button class="btn waves-effect waves-light" type="submit" name="action">Add new link
+                    <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      <!-- </form> -->
+    </li>
+    {{#each links}}
+      <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+    {{/each}}
+  </ul>
+</template>
