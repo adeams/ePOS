@@ -1,7 +1,115 @@
 <template name="salesPage">
+    <!-- {{> saleMenus}}
+    {{> saleButons}}
+    {{> saleForms}} -->
+
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                {{> saleMenus}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                    {{> saleButons}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                    {{> saleForms}}
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <!-- <div class="row">
+        <div class="grid-example col s12">
+            <div class="card">
+                    <span class="flow-text">I am always full-width (col s12)</span>
+            </div>
+        </div>
+        <div class="grid-example col s12 m6">
+            <div class="card">
+                    <span class="flow-text">I am full-width on mobile (col s12 m6)</span>
+            </div>
+            
+        </div>
+    </div> -->
+    
+  <!-- <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card">
+                    <p>s12</p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l2">
+            <div class="card">
+                <div class="card">
+                    <p>col s12 m4 l2</p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l8">
+            <div class="card">
+                <div class="card">
+                    <p>col s12 m4 l8</p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l2">
+            <div class="card">
+                <div class="card">
+                    <p>col s12 m4 l2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card">
+                        <p>col s12 m6 l3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card">
+                        <p>col s12 m6 l3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card">
+                        <p>col s12 m6 l3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card">
+                        <p>col s12 m6 l3</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+</template>
+
+<template name="saleMenus">
     <nav>
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#!" class="brand-logo">
+                <i class="material-icons right">open_in_browser</i>
+            </a>
             <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="sass.html">หน้าหลัก</a></li>
@@ -19,28 +127,146 @@
             </ul>
         </div>
     </nav>
-    <div class="row">
-        <ul>
-            <button class="waves-effect waves-light blue darken-1 btn-large">เริ่มใหม่
-                <i class="material-icons left">refresh</i>
-            </button>
-            <button class="waves-effect waves-light blue darken-1 btn-large">บิลล่าสุด
-                <i class="material-icons right">open_in_browser</i>
-            </button>
-            <button class="waves-effect waves-light blue darken-1 btn-large">พักบิล
-                <i class="material-icons right">pause_circle_outline</i>
-            </button>    
-        </ul>
-    </div>
+</template>
 
-    <div class="input-field col s12">
-        <select multiple>
-            <option value="">Choose your option</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-        </select>
-        <label>Materialize Multiple Select</label>
+<template name="saleButons">
+    <div class="row">
+        <button class="waves-effect waves-light blue darken-1 btn-large">เริ่มใหม่
+            <i class="material-icons left">refresh</i>
+        </button>
+        <button class="waves-effect waves-light blue darken-1 btn-large">บิลล่าสุด
+            <i class="material-icons right">open_in_browser</i>
+        </button>
+        <button class="waves-effect waves-light blue darken-1 btn-large">พักบิล
+            <i class="material-icons right">pause_circle_outline</i>
+        </button> 
     </div>
-  </template>
+</template>
+
+<template name="saleForms">
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input value="" id="first_name2" type="text" class="validate">
+                <label class="active" for="first_name2">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+            </div>
+            </div>
+            <div class="row">
+            <div class="input-field col s12">
+                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                <label for="disabled">Disabled</label>
+            </div>
+            </div>
+            <div class="row">
+            <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+            </div>
+            </div>
+            <div class="row">
+            <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col s12">
+                This is an inline input field:
+                <div class="input-field inline">
+                <input id="email" type="email" class="validate">
+                <label for="email" data-error="wrong" data-success="right">Email</label>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col s2">
+                    <label>Browser Select</label>
+                    <select class="browser-default">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <form action="#">
+            <p>
+                <input name="group1" type="radio" id="test1" />
+                <label for="test1">Red</label>
+            </p>
+            <p>
+                <input name="group1" type="radio" id="test2" />
+                <label for="test2">Yellow</label>
+            </p>
+            <p>
+                <input class="with-gap" name="group1" type="radio" id="test3"  />
+                <label for="test3">Green</label>
+            </p>
+            <p>
+                <input name="group1" type="radio" id="test4" disabled="disabled" />
+                <label for="test4">Brown</label>
+            </p>
+            <p>
+                <input class="with-gap" name="group3" type="radio" id="test5" checked />
+                <label for="test5">Red</label>
+            </p>
+        </form>
+        <form action="#">
+            <p>
+                <input type="checkbox" id="test5" />
+                <label for="test5">Red</label>
+            </p>
+            <p>
+                <input type="checkbox" id="test6" checked="checked" />
+                <label for="test6">Yellow</label>
+            </p>
+            <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                <label for="filled-in-box">Filled in</label>
+            </p>
+            <p>
+                <input type="checkbox" id="indeterminate-checkbox" />
+                <label for="indeterminate-checkbox">Indeterminate Style</label>
+            </p>
+            <p>
+                <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+                <label for="test7">Green</label>
+            </p>
+            <p>
+                <input type="checkbox" id="test8" disabled="disabled" />
+                <label for="test8">Brown</label>
+            </p>
+        </form> 
+          <!-- Switch -->
+        <div class="switch">
+            <label>
+            Off
+            <input type="checkbox">
+            <span class="lever"></span>
+            On
+            </label>
+        </div>
+    
+      <!-- Disabled Switch -->
+        <div class="switch">
+            <label>
+            Off
+            <input disabled type="checkbox">
+            <span class="lever"></span>
+            On
+            </label>
+        </div>  
+        <input type="text" class="datepicker">         
+    </div>
+</template>
   
