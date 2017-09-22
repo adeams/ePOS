@@ -2,28 +2,41 @@
     <!-- {{> saleMenus}}
     {{> saleButons}}
     {{> saleForms}} -->
-
     <div class="row">
+        <div class="col s12">
+            {{> saleMenus}}
+        </div>
+        <div class="col s10">
+            <div class="card">
+                {{> saleButons}}
+                {{> saleForms}}
+                {{> saleNow}}
+            </div>
+        </div>
+        <div class="col s2">
+            <div class="card">
+                {{> saleGoodTrade}}
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row">
         <div class="col s12">
             <div class="card">
                 {{> saleMenus}}
+                {{> saleButons}}
+                {{> saleForms}}
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col s12">
             <div class="card">
-                    {{> saleButons}}
+                    {{> saleGoodTrade}}
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col s12">
-            <div class="card">
-                    {{> saleForms}}
-            </div>
-        </div>
-    </div>
+    </div> -->
+    
 
 
 
@@ -131,142 +144,172 @@
 
 <template name="saleButons">
     <div class="row">
-        <button class="waves-effect waves-light blue darken-1 btn-large">เริ่มใหม่
+        <button class="waves-effect waves-light green darken-1 btn-large">เริ่มใหม่
             <i class="material-icons left">refresh</i>
         </button>
         <button class="waves-effect waves-light blue darken-1 btn-large">บิลล่าสุด
-            <i class="material-icons right">open_in_browser</i>
+            <i class="material-icons left">open_in_browser</i>
         </button>
-        <button class="waves-effect waves-light blue darken-1 btn-large">พักบิล
-            <i class="material-icons right">pause_circle_outline</i>
+        <button class="waves-effect waves-light red darken-1 btn-large">พักบิล
+            <i class="material-icons left">pause_circle_outline</i>
         </button> 
+        <button class="waves-effect waves-light blue-grey darken-1 btn-large">พิมพ์รายงานย่อย
+            <i class="material-icons left">printer</i>
+        </button>
     </div>
 </template>
 
 <template name="saleForms">
     <div class="row">
-        <form class="col s12">
-            <div class="row">
-            <div class="input-field col s6">
-                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-                <input value="" id="first_name2" type="text" class="validate">
-                <label class="active" for="first_name2">First Name</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-            </div>
-            </div>
-            <div class="row">
-            <div class="input-field col s12">
-                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                <label for="disabled">Disabled</label>
-            </div>
-            </div>
-            <div class="row">
-            <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
-            </div>
-            </div>
-            <div class="row">
-            <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-            </div>
-            </div>
-            <div class="row">
-            <div class="col s12">
-                This is an inline input field:
-                <div class="input-field inline">
-                <input id="email" type="email" class="validate">
-                <label for="email" data-error="wrong" data-success="right">Email</label>
-                </div>
-            </div>
-            </div>
-            <div class="row">
-                <div class="col s2">
-                    <label>Browser Select</label>
-                    <select class="browser-default">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-                </div>
-            </div>
-        </form>
-        <form action="#">
-            <p>
-                <input name="group1" type="radio" id="test1" />
-                <label for="test1">Red</label>
-            </p>
-            <p>
-                <input name="group1" type="radio" id="test2" />
-                <label for="test2">Yellow</label>
-            </p>
-            <p>
-                <input class="with-gap" name="group1" type="radio" id="test3"  />
-                <label for="test3">Green</label>
-            </p>
-            <p>
-                <input name="group1" type="radio" id="test4" disabled="disabled" />
-                <label for="test4">Brown</label>
-            </p>
-            <p>
-                <input class="with-gap" name="group3" type="radio" id="test5" checked />
-                <label for="test5">Red</label>
-            </p>
-        </form>
-        <form action="#">
-            <p>
-                <input type="checkbox" id="test5" />
-                <label for="test5">Red</label>
-            </p>
-            <p>
-                <input type="checkbox" id="test6" checked="checked" />
-                <label for="test6">Yellow</label>
-            </p>
-            <p>
-                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-                <label for="filled-in-box">Filled in</label>
-            </p>
-            <p>
-                <input type="checkbox" id="indeterminate-checkbox" />
-                <label for="indeterminate-checkbox">Indeterminate Style</label>
-            </p>
-            <p>
-                <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
-                <label for="test7">Green</label>
-            </p>
-            <p>
-                <input type="checkbox" id="test8" disabled="disabled" />
-                <label for="test8">Brown</label>
-            </p>
-        </form> 
-          <!-- Switch -->
-        <div class="switch">
-            <label>
-            Off
-            <input type="checkbox">
-            <span class="lever"></span>
-            On
-            </label>
+        <div class="col s2">
+            <label>ช่องทางขาย</label>
+            <select class="browser-default">
+                <option value="" disabled selected>เลือกช่องทางขาย</option>
+                <option value="1">หน้าร้าน</option>
+                <option value="2">อนนไลน์</option>
+            </select>
         </div>
+
+        <div class="col s2">
+            <label>พนักงานขาย</label>
+            <select class="browser-default">
+                <option value="" disabled selected>เลือกพนักงานขาย</option>
+                <option value="1">ลุกมัน อะแดม</option>
+                <option value="2">นุรอามานี โต๊ะยาโง๊ะ</option>
+            </select>
+        </div>
+
+        <div class="col s2">
+            <label>สำนักงานสาขา</label>
+            <select class="browser-default">
+                <option value="" disabled selected>เลือกสาขา</option>
+                <option value="1">เคหะหนองจอก</option>
+                <option value="2">ศนพ</option>
+            </select>
+        </div>
+        
+        <div class="col s2">
+            <label>เงื่อนไข</label>
+            <select class="browser-default">
+                <option value="1">ราคปลีก</option>
+                <option value="2">ราคาตัวแทน</option>
+                <option value="2">ราคาส่ง</option>
+            </select>
+        </div>
+        
+        <div class="col s2">
+            <div class="switch">
+                <label>
+                vat
+                <input type="checkbox">
+                <span class="lever"></span>
+                no vat
+                </label>
+            </div>
+        </div>
+
+        <div class="col s2">
+            <input type="text" class="datepicker"> 
+        </div>
+    </div>
     
-      <!-- Disabled Switch -->
-        <div class="switch">
-            <label>
-            Off
-            <input disabled type="checkbox">
-            <span class="lever"></span>
-            On
-            </label>
-        </div>  
-        <input type="text" class="datepicker">         
+    <div class="row">   
+        <div class="row">
+            <div class="input-field col s2">
+                <input value="" id="first_name2" type="text" class="validate">
+                <label class="active" for="first_name2">รหัสสมาชิก</label>
+            </div>
+            <button class="waves-effect waves-light blue darken-1 btn-large">ค้นหา
+                <i class="material-icons left">search</i>
+            </button>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s1">
+                <input value="" id="first_name2" type="text" class="validate">
+                <label class="active" for="first_name2">จำนวนสิ้นค้า</label>
+            </div>
+            <div class="input-field col s2">
+                <input value="" id="first_name2" type="text" class="validate">
+                <label class="active" for="first_name2">รหัสสินค้า</label>
+            </div>
+            <button class="waves-effect waves-light blue darken-1 btn-large">ค้นหา
+                <i class="material-icons left">search</i>
+            </button>
+            <button class="waves-effect waves-light blue darken-1 btn-large">บันทึกรายการ
+                <i class="material-icons left">add_circle_outline</i>
+            </button>
+        </div>       
     </div>
 </template>
+
+<template name="saleGoodTrade">
+    <div class="row">
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th><h4 class="center-align">สิ้นค้าขายบ่อย</h4></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                <td>แป้ง</td>
+                </tr>
+                <tr>
+                <td>ผงซักฟอก</td>
+                </tr>
+                <tr>
+                <td>ยาสีฟัน</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</template>
+
+<template name="saleNow">
+        <div class="row">
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>รหัสสินค้า</th>
+                        <th>รายการสินค้า</th>
+                        <th>ราคา</th>
+                        <th>จำนวน</th>
+                        <th>รวม</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>123456789</td>
+                        <td>เครื่องสำอาง</td>
+                        <td>100</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>123456789</td>
+                        <td>แป้ง</td>
+                        <td>100</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>123456789</td>
+                        <td>สบู่</td>
+                        <td>100</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </div>
+    </template>
   
