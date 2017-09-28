@@ -2,6 +2,7 @@
 
 import { Meteor } from 'meteor/meteor';
 import { Links } from '../../api/links/links.js';
+import { Members } from '../../api/links/links.js';
 
 Meteor.startup(() => {
   // if the Links collection is empty
@@ -30,5 +31,27 @@ Meteor.startup(() => {
     ];
 
     data.forEach(link => Links.insert(link));
+  }
+
+  if (Members.find().count() === 0) {
+    const data = [
+      {
+        name: 'lookmun adeam',
+        type: 'admin',
+        createdAt: new Date(),
+      },
+      {
+        name: 'sulva adeam',
+        type: 'user',
+        createdAt: new Date(),
+      },
+      {
+        name: 'amanee thoyanggoh',
+        type: 'members',
+        createdAt: new Date(),
+      },
+    ];
+
+    data.forEach(member => Members.insert(member));
   }
 });

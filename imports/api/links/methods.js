@@ -15,4 +15,14 @@ Meteor.methods({
       createdAt: new Date(),
     });
   },
+  'members.insert'(names, type) {
+    check(name, String);
+    check(type, String);
+
+    return Members.insert({
+      name,
+      type,
+      createdAt: new Date(),
+    });
+  },
 });

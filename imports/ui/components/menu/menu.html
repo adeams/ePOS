@@ -1,0 +1,61 @@
+<template name="menu">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="home" class="brand-logo">
+                    <i class="material-icons right">open_in_browser</i>LOGO
+                </a>
+                <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="home">หน้าหลัก</a></li>
+                    <li><a class="dropdown-button report" href="report" data-activates="dropdownReport">รายงาน<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button promotion" href="promotion" data-activates="dropdownPromotion">ส่งเสริมการขาย<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button setting" href="setting" data-activates="dropdownSetting">ตั้งค่า<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="help">ช่วยเหลือ</a></li>
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdownReport' class='dropdown-content'>
+                        <li><a href="home"><i class="material-icons">description</i>รายงานรายวัน</a></li>
+                        <li><a href="help"><i class="material-icons">description</i>รายงานรายเดือน</a></li>
+                        <li><a href="help"><i class="material-icons">description</i>รายงานรายปี</a></li>
+                        <li class="divider"></li>
+                        <li><a href="home"><i class="material-icons">description</i>รายงานตามพนักงาน</a></li>
+                        <li><a href="help"><i class="material-icons">description</i>รายงานตามสิน่ค้า</a></li>
+                        <li class="divider"></li>
+                        <li><a href="help"><i class="material-icons">description</i>รายงานสินค้า</a></li>
+                        <li><a href="help"><i class="material-icons">description</i>รายงานต้นทุน</a></li>
+                    </ul>
+                    <ul id='dropdownPromotion' class='dropdown-content'>
+                        <li><a href="home"><i class="material-icons">card_giftcard</i>รายงานรายวัน</a></li>
+                        <li><a href="help"><i class="material-icons">card_giftcard</i>รายงานรายเดือน</a></li>
+                        <li><a href="help"><i class="material-icons">card_giftcard</i>รายงานรายปี</a></li>
+                        <li class="divider"></li>
+                        <li><a href="home"><i class="material-icons">card_giftcard</i>รายงานตามพนักงาน</a></li>
+                        <li><a href="help"><i class="material-icons">card_giftcard</i>รายงานตามสิน่ค้า</a></li>
+                        <li class="divider"></li>
+                        <li><a href="help"><i class="material-icons">card_giftcard</i>รายงานสินค้า</a></li>
+                        <li><a href="help"><i class="material-icons">card_giftcard</i>รายงานต้นทุน</a></li>
+                    </ul>
+                    <ul id='dropdownSetting' class='dropdown-content'>
+                        <li><a href="home"><i class="material-icons">settings</i>รายงานรายวัน</a></li>
+                        <li><a href="help"><i class="material-icons">settings</i>รายงานรายเดือน</a></li>
+                        <li><a href="help"><i class="material-icons">settings</i>รายงานรายปี</a></li>
+                        <li class="divider"></li>
+                        <li><a href="home"><i class="material-icons">settings</i>รายงานตามพนักงาน</a></li>
+                        <li><a href="help"><i class="material-icons">settings</i>รายงานตามสิน่ค้า</a></li>
+                        <li class="divider"></li>
+                        <li><a href="help"><i class="material-icons">settings</i>รายงานสินค้า</a></li>
+                        <li><a href="help"><i class="material-icons">settings</i>รายงานต้นทุน</a></li>
+                    </ul>
+                    
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="home">หน้าหลัก</a></li>
+                    <li><a href="report">รายงาน</a></li>
+                    <li><a href="promotion">ส่งเสริมการขาย</a></li>
+                    <li><a href="setting">ตั้งค่า</a></li>
+                    <li><a href="help">ช่วยเหลือ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</template>

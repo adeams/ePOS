@@ -4,7 +4,7 @@
     {{> saleForms}} -->
     <div class="row">
         <div class="col s12">
-            {{> saleMenus}}
+            {{> menu}}
         </div>
         <div class="col s10">
             <div class="card">
@@ -219,9 +219,32 @@
                 <input value="" id="first_name2" type="text" class="validate">
                 <label class="active" for="first_name2">รหัสสมาชิก</label>
             </div>
-            <button class="waves-effect waves-light blue darken-1 btn-large">ค้นหา
+            <!-- Modal Trigger -->
+            <button class="waves-effect waves-light blue darken-1 btn-large modal-trigger" href="#modal1">ค้นหา
                 <i class="material-icons left">search</i>
             </button>
+            <!-- Modal Structure -->
+            <!-- <div id="modal1" class="modal"> -->
+            <!-- <div id="modal1" class="modal bottom-sheet"> -->
+            <div id="modal1" class="modal modal-fixed-footer">
+            <!-- <div id="modal1" class="modal"> -->
+                <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                    <div class="col s12">
+                        <label>เงื่อนไข</label>
+                        <select class="browser-default">
+                            <option value="1">ราคปลีก</option>
+                            <option value="2">ราคาตัวแทน</option>
+                            <option value="2">ราคาส่ง</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button  class="modal-action modal-close waves-effect waves-green btn-flat ok">ok</button>
+                    <button  class="modal-action modal-close waves-effect waves-green btn-flat cancle">Cancle</button>
+                </div>
+            </div>
         </div>
 
         <div class="row">
