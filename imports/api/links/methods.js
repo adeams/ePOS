@@ -15,12 +15,26 @@ Meteor.methods({
       createdAt: new Date(),
     });
   },
-  'members.insert'(names, type) {
+  'members.insert'(code, name, type) {
+    check(code, String);
     check(name, String);
     check(type, String);
 
     return Members.insert({
       name,
+      type,
+      createdAt: new Date(),
+    });
+  },
+  'products.insert'(code, name, price, number, type) {
+    check(name, String);
+    check(type, String);
+
+    return Members.insert({
+      code,
+      name,
+      price,
+      number,
       type,
       createdAt: new Date(),
     });

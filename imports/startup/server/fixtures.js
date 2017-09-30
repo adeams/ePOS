@@ -36,16 +36,19 @@ Meteor.startup(() => {
   if (Members.find().count() === 0) {
     const data = [
       {
+        code:'0001',
         name: 'lookmun adeam',
         type: 'admin',
         createdAt: new Date(),
       },
       {
+        code:'0002',
         name: 'sulva adeam',
         type: 'user',
         createdAt: new Date(),
       },
       {
+        code:'0003',
         name: 'amanee thoyanggoh',
         type: 'members',
         createdAt: new Date(),

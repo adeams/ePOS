@@ -4,10 +4,12 @@ import './info.html';
 
 Template.info.onCreated(function () {
   Meteor.subscribe('links.all');
+  Meteor.subscribe('members.all');
+  Meteor.subscribe('products.all');
 });
 
 Template.info.helpers({
-  links() {
+  linksss() {
     return Links.find({});
   },
 });

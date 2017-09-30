@@ -1,9 +1,14 @@
-import { Links } from '/imports/api/links/links.js';
+//import { Links } from '/imports/api/links/links.js';
+//import { Members } from '/imports/api/links/links.js';
+//import { Products } from '/imports/api/links/links.js';
 import { Meteor } from 'meteor/meteor';
 import './salesPage.html';
+//import '../../components/info/info.html';
 
 Template.salesPage.onCreated(function () {
-  Meteor.subscribe('links.all');
+  //Meteor.subscribe('links.all');
+  //Meteor.subscribe('members.all');
+  //Meteor.subscribe('products.all');
   $(document).ready(function(){
        console.log("$(document).ready(function()")
       //$(".button-collapse").sideNav();

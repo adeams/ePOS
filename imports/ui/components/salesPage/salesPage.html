@@ -18,6 +18,9 @@
                 {{> saleGoodTrade}}
             </div>
         </div>
+        <!-- <div class="col s2">
+            {{> info}} 
+        </div> -->
     </div>
 
     <!-- <div class="row">
@@ -157,6 +160,15 @@
             <i class="material-icons left">printer</i>
         </button>
     </div>
+    <div class="row">
+        <h2>Learn Meteor!</h2>
+        <ul>
+            {{#each links}}
+                <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+                <h2>Learn Meteor!</h2>
+            {{/each}}
+        </ul>
+    </div>
 </template>
 
 <template name="saleForms">
@@ -292,47 +304,32 @@
 </template>
 
 <template name="saleNow">
-        <div class="row">
-            <table class="striped">
-                <thead>
-                    <tr>
-                        <th>ลำดับ</th>
-                        <th>รหัสสินค้า</th>
-                        <th>รายการสินค้า</th>
-                        <th>ราคา</th>
-                        <th>จำนวน</th>
-                        <th>รวม</th>
-                    </tr>
-                </thead>
-    
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>123456789</td>
-                        <td>เครื่องสำอาง</td>
-                        <td>100</td>
-                        <td>2</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>123456789</td>
-                        <td>แป้ง</td>
-                        <td>100</td>
-                        <td>2</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>123456789</td>
-                        <td>สบู่</td>
-                        <td>100</td>
-                        <td>2</td>
-                        <td>200</td>
-                    </tr>
-                </tbody>
-            </table>
-    
-        </div>
-    </template>
+    <div class="row">
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>ลำดับ</th>
+                    <th>รหัสสินค้า</th>
+                    <th>รายการสินค้า</th>
+                    <th>ราคา</th>
+                    <th>จำนวน</th>
+                    <th>รวม</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each links}}
+                <tr>
+                    <td>1</td>
+                    <td>123456789</td>
+                    <td>เครื่องสำอาง</td>
+                    <td>100</td>
+                    <td>2</td>
+                    <td>200</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
   
