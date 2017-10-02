@@ -4,6 +4,9 @@ import { Meteor } from 'meteor/meteor';
 import { Links } from '../../api/links/links.js';
 import { Members } from '../../api/links/links.js';
 import { Products } from '../../api/links/links.js';
+import { GroupProducts } from '../../api/links/links.js';
+import { Agents } from '../../api/links/links.js';
+import { Branchs } from '../../api/links/links.js';
 
 Meteor.startup(() => {
   // if the Links collection is empty
@@ -37,26 +40,18 @@ Meteor.startup(() => {
   if (Members.find().count() === 0) {
     const data = [
       {
-        code:'0001',
-        name: 'lookmun adeam',
-        type: 'admin',
-        createdAt: new Date(),
-      },
-      {
-        code:'0002',
-        name: 'sulva adeam',
-        type: 'user',
-        createdAt: new Date(),
-      },
-      {
-        code:'0003',
-        name: 'amanee thoyanggoh',
-        type: 'members',
+        membersId:1,
+        membersCode:'00001',
+        membersName:'lookmun adeam',
+        membersTel:'0841135943',
+        membersAddress:'nongjok',
+        membersBranchId:'000001',
+        membersType:'admin',
         createdAt: new Date(),
       },
     ];
 
-    data.forEach(member => Members.insert(member));
+    data.forEach(Member => Members.insert(Member));
   }
 
   if (Products.find().count() === 0) {
@@ -65,13 +60,13 @@ Meteor.startup(() => {
         productsId:1,
         productGroupId:1,
         productsCode:0000001,
-        productsName:test1,
+        productsName:'test1',
         productsDetail:'ทดสอบ',
         productsLastUpdate: new Date(),
         productsQuantity:24,
         productsPackBarcode:0000011,
         productsTotalPerPack:12,
-        productsExpireDate: new Date()+100,
+        productsExpireDate:'',
         productsReturn:'',
         productsSeleCondition:'sele',
         productsPrice:20,
@@ -91,4 +86,48 @@ Meteor.startup(() => {
 
     data.forEach(Product => Products.insert(Product));
   }
+
+  if (GroupProducts.find().count() === 0) {
+    const data = [
+      {
+        groupProductsId:1,
+        groupProductsCode:'000001', 
+        groupProductsName:'ผลไม้', 
+        groupProductsDetail:'ผลไม้ชนิดต่าง', 
+        groupProductsLastUpdate: new Date(),
+        createdAt: new Date(),
+      },
+    ];
+
+    data.forEach(GroupProduct => GroupProducts.insert(GroupProduct));
+  }
+
+  if (Agents.find().count() === 0) {
+    const data = [
+      {
+        agentsId:1, 
+        agentsName:'ลุกมัน อะแดม', 
+        agentsTel:'0841135943', 
+        agentsAddress:'หนองจอก',
+        createdAt: new Date(),
+      },
+    ];
+
+    data.forEach(Agent => Agents.insert(Agent));
+  }
+
+  if (Branchs.find().count() === 0) {
+    const data = [
+      {
+        branchsId:1, 
+        branchsName:'สาขาหนองจอก', 
+        branchsTel:'0972472310', 
+        branchsAdderess:'เคหะหนองจอก',
+        createdAt: new Date(),
+      },
+    ];
+
+    data.forEach(Branch => Branchs.insert(Branch));
+  }
+
 });
