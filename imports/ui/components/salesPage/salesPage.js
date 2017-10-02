@@ -6,9 +6,12 @@ import './salesPage.html';
 //import '../../components/info/info.html';
 
 Template.salesPage.onCreated(function () {
-  //Meteor.subscribe('links.all');
-  //Meteor.subscribe('members.all');
-  //Meteor.subscribe('products.all');
+  Meteor.subscribe('links.all');
+  Meteor.subscribe('members.all');
+  Meteor.subscribe('products.all');
+  Meteor.subscribe('groupProducts.all');
+  Meteor.subscribe('agents.all');
+  Meteor.subscribe('branchs.all');
   $(document).ready(function(){
        console.log("$(document).ready(function()")
       //$(".button-collapse").sideNav();

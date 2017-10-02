@@ -3,6 +3,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Links } from '../../api/links/links.js';
 import { Members } from '../../api/links/links.js';
+import { Products } from '../../api/links/links.js';
 
 Meteor.startup(() => {
   // if the Links collection is empty
@@ -56,5 +57,38 @@ Meteor.startup(() => {
     ];
 
     data.forEach(member => Members.insert(member));
+  }
+
+  if (Products.find().count() === 0) {
+    const data = [
+      {
+        productsId:1,
+        productGroupId:1,
+        productsCode:0000001,
+        productsName:test1,
+        productsDetail:'ทดสอบ',
+        productsLastUpdate: new Date(),
+        productsQuantity:24,
+        productsPackBarcode:0000011,
+        productsTotalPerPack:12,
+        productsExpireDate: new Date()+100,
+        productsReturn:'',
+        productsSeleCondition:'sele',
+        productsPrice:20,
+        productsWholesaleCost:18,
+        productsAgentPrice:15,
+        productsPricePerPack:300,
+        productsQuantityOfPack:2,
+        productsPriceBuy:13,
+        productsTag:'',
+        productsPicture:'',
+        productsWeight:1000,
+        productsCost:12.5,
+        productsType:'ของร้าน',
+        createdAt:  new Date(),
+      },
+    ];
+
+    data.forEach(Product => Products.insert(Product));
   }
 });
